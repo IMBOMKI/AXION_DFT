@@ -28,7 +28,7 @@ int main()
 
   struct timespec start, end;
 
-  ViInt64 NumRecords=500;
+  ViInt64 NumRecords=300;
   ViInt64 points=200000;
   ViReal64 SampleRate=500.0E6;
 
@@ -129,7 +129,7 @@ int main()
 
   Int_t fileNum=1;
 
-  while (fileNum<2){
+  while (fileNum<11){
 
   status =AgMD1_InitiateAcquisition(session);
   fprintf(stderr, "Start Acquisition of %08d-th File \n", fileNum);    

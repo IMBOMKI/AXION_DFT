@@ -20,7 +20,7 @@ void hist_Factory(){
   /////////////////////////////////////
 
   std::string input_name = "00000001.root";
-  TFile *f = TFile::Open("/scratch1/Digitizer/data/00000001.root");
+  TFile *f = TFile::Open("/home/bomki/workspace/Digitizer/data/00000001.root");
   TTree *t = (TTree*)f->Get("trdata");
   Int_t pts;
   Double_t wfmData[200000];
@@ -78,7 +78,7 @@ void hist_Factory(){
     //////// Output File 
     //////////////////////////////////
 
-    std::string output_dir = "/scratch1/Digitizer/analy/";
+    std::string output_dir = "/home/bomki/workspace/Digitizer/analy/";
     std::string ZeroPadNum = ZeroPadNumber(i_rec+1,5);
     std::string output_name = ZeroPadNum+"_"+input_name;
     TFile *f_hist = TFile::Open(TString(output_dir+output_name),"recreate");
